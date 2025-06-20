@@ -3,15 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="ON title.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Graphic Design Portfolio</title>
+    <title>ON Designs</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url("paper.gif");
+            background-color: rgb(255, 255, 255);
         }
         header {
             background-color: rgb(77, 77, 77);
@@ -35,12 +36,12 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 20px;
+            padding: 10px;
         }
         .portfolio-item {
             width: 400px;
             margin: 15px;
-            background-color: #CIC9CC;
+            background-color: ffffff;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-radius: 10px;
             overflow: hidden;
@@ -66,11 +67,29 @@
             background-color: #333;
             color: white;
         }
-        @media (max-width: 768px) {
+       @media (max-width: 768px) {
             .portfolio-item {
                 width: 100%;
             }
-        }
+       }
+       a:link {
+                color: rgb(0, 0, 0);
+                }
+                /* visited link */
+                a:visited {
+                color: green;
+                }
+
+                /* mouse over link */
+                a:hover {
+                color: rgb(28, 183, 255);
+                }
+
+                /* selected link */
+                a:active {
+                color: rgb(255, 0, 0);
+                }
+      
     </style>
 </head>
 <body>
@@ -78,9 +97,9 @@
     <header>
         <h1>Graphic Design Portfolio</h1>
         <nav>
-            <a href="#about"><u>About Me</u></font></a>
-            <a href="#portfolio"><u>Portfolio</u></a>
-            <a href="#contact"><u>Contact</u></a>
+            <a href="#about">About Me</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -89,14 +108,14 @@
             <p1><font face="Montserrat SemiBold" size="5">ON DESIGNS<sup>©</sup></font></p1><hr>
         </div>
     <section id="about">
-        <div style="text-align: center; padding: 1px 20px;">
-            <h2>About Me</h2>
+        <div style="text-align:justify;  text-justify: inter-word; padding: 1px 20px;">
+            <h2 style="text-align:center">About Me</h2>
             <p>🎨 Hi, I’m Oditha!
-                I'm a passionate graphic designer based in Sri Lanka, specializing in creating eye-catching banners, thumbnails, flyers, and social media posters. With a creative mindset and a keen eye for detail, I transform ideas into visually stunning designs that connect with audiences and leave a lasting impact.
+                I'm a passionate junior graphic designer based in Sri Lanka, specializing in creating eye-catching banners, thumbnails, flyers, and social media posters. With a creative mindset and a keen eye for detail, I transform ideas into visually stunning designs that connect with audiences and leave a lasting impact.
                 
-                <br>💡 Whether you're looking for bold, modern designs or something sleek and minimalistic, I’ve got you covered. My goal is to bring your vision to life with high-quality and personalized designs that meet your specific needs.
+                💡 Whether you're looking for bold, modern designs or something sleek and minimalistic, I’ve got you covered. My goal is to bring your vision to life with high-quality and personalized designs that meet your specific needs.
                 
-                <br>📩 Feel free to reach out—let’s create something amazing together!</p>
+                📩 Feel free to reach out—let’s create something amazing together!</p>
         </div>
     </section>
 
@@ -219,3 +238,5 @@
 
     <footer>
         <p>&copy; 2025 All rights reserved.</p>
+    </footer>
+</html>

@@ -1,230 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" type="x-icon" href="ON title.png">
-  <title>ON Designs</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    body {
-      background: #f8f9fc;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(180deg, #00C6FB, #005BEA);
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-    }
-    header h1 {
-      font-size: 50px;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-    header p {
-      font-size: 18px;
-      margin-top: -20px;
-      color: #DCDCDD;
-    }
-    .profile {
-      max-width: 1000px;
-      margin: -60px auto 20px;
-      background: #fff;
-      border-radius: 15px;
-      padding: 30px;
-      display: flex;
-      align-items: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    .profile img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      margin-right: 20px;
-      margin-bottom: 150px;
-    }
-    .profile h2 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-    .tools-industries {
-      margin-top: 20px;
-    }
-    .tools-industries h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-    .badge {
-      display: inline-block;
-      background: #f1f1f1;
-      padding: 5px 10px;
-      margin: 5px;
-      border-radius: 8px;
-      font-size: 14px;
-    }
-    section {
-      max-width: 1300px;
-      margin: 40px auto;
-      padding: 0 10px;
-    }
-    section h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    .works {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      row-gap: 30px;
-      column-gap: 66px;
-    }
-    .works2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 66px;
-    }
-    .works3 {
-      display: grid;
-      grid-template-columns: auto auto auto auto auto;
-      column-gap: 19px;
-      margin-top: 30px;
-    }
-    .works img {
-      width: 120%;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(104, 86, 86, 0.1);
-      transition: transform 0.3s;
-    }
-    .works2 img {
-      width: 120%;
-      height: 105%;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .works3 img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .works img:hover {
-      transform: scale(1.05);
-    }
-    .works2 img:hover {
-      transform: scale(1.05);
-     }
-    .works3 img:hover {
-      transform: scale(1.05);
-     }
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      background: #fff;
-      border-top: 1px solid #ddd;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 5px 15px;
-      background: #007bff;
-      color: #fff;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #0056b3;
-    }
-    .socials a {
-      margin: 0 10px;
-      color: #007bff;
-      text-decoration: none;
-    }
-.p{
-  color: #333; /* Dark Gray */
-}
-
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ON Designs — Portfolio</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="ON Designs — Graphic Design Portfolio">
+<link rel="icon" href="on-logo.png" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<header class="nav">
+  <a class="brand" href="#home" aria-label="ON Designs home"><img class="on-mark" src="assets/on-logo.png" alt="ON Designs"></a>
+  <nav id="navigation" aria-label="Main navigation">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="menu" id="menu" aria-expanded="false" aria-controls="navigation">Menu</button>
+</header>
 
-  <header>
-    <h1>PORTFOLIO 2025</h1>
-    <p>Graphic Designing | ON Designs&copy;</p>
-  </header>
-
-  <div class="profile">
-    <img src="profile pic.webp" alt="Profile">
-    <div>
-      <h2>Hi! I'm Oditha</h2>
-      <div class="p"><p><i>
-         I’m a junior Graphic Designer from Sri Lanka, specializing in <u>banners, thumbnails, flyers, and social media posters. </u>
-         With creativity and attention to detail, I create modern or minimalistic designs that connect with audiences and bring ideas to life.</i>
-      </p>
-      </div>      
-</section>
-    
-        <h3>Tools</h3>
-        <span class="badge">Photoshop</span>
-        <span class="badge">Illustrator</span>
-        <!--<span class="badge">Figma</span>-->
-        <h3>Industries</h3>
-        <span class="badge">Social Media</span>
-        <span class="badge">Advertising</span>
-        <span class="badge">Fashion</span>
-        <span class="badge">Food & Beverage</span>
-        <span class="badge">Technology</span>
-        <span class="badge">Business</span>
+<main>
+<section class="hero" id="home">
+  <div class="grid"></div>
+  <div class="curve curve1"></div><div class="curve curve2"></div>
+  <div class="star star1">✦</div><div class="star star2">✦</div>
+  <div class="hero-meta"><span>2026</span><span>ON DESIGNS</span></div>
+  <div class="wordmark"><span>PORT</span><i>folio</i></div>
+  <div class="hero-content">
+    <div class="portrait"><img src="assets/oditha-profile.png" alt="Oditha — ON Designs"></div>
+    <div class="bio">
+      <div class="hello">hello!</div>
+      <h1>ODITHA <span>│ GRAPHIC DESIGNER</span></h1>
+      <p>I create modern visual identities, social media graphics, advertising artwork and digital designs that make ideas easy to notice and remember.</p>
+      <div class="hero-links">
+        <a href="#work">View selected work ↘</a>
+        <a href="#contact">Let's talk ↗</a>
       </div>
     </div>
   </div>
+  <div class="scroll">SCROLL TO EXPLORE ↓</div>
+</section>
 
-  <section>
-    <h2>My Works</h2>
-    <div class="works">
-      <img src="PIZZA Poster.webp" alt="Work 1">
-      <img src="biriyani poster copy.webp" alt="Work 2">
-      <img src="Mountain Black Online New year post.webp" alt="Work 3">
-      <img src="Shoe product.webp" alt="Work 4">
-      <img src="Seeking.webp" alt="Work 5">
-      <img src="Spaicy hot dogs copy.webp" alt="Work 6">
-      <img src="shoes.webp" alt="Work 7">
-      <img src="Happy birthday.webp" alt="Work 8">
-    </div><br>
-    <div class="works2">
-      <img src="Chamara Weerasinha 2.webp" alt="Work 1">
-      <img src="La Lawata.webp" alt="Work 2">
-      <img src="Far Cry 3 Yt Thumbnil.webp" alt="Work 3">
-      <img src="Thumbnail.webp" alt="Work 4">
-    </div>
-        <div class="works3">
-      <img src="event post final compressed.webp" alt="Work 1">
-      <img src="Food menu.webp" alt="Work 2">
-      <img src="pizza plyer 2.webp" alt="Work 3">
-      <img src="flyer.webp" alt="Work 4">
-    </div>
-  </section>
+<section class="work" id="work">
+  <div class="section-head">
+    <div class="heading"><small>02</small><h2 id="workTitle">SELECTED<br><em>WORK</em></h2></div>
+    <p>Selected work<br>2025—2026</p>
+  </div>
+  <div class="category-rail" aria-label="Portfolio categories">
+    <button class="cat active" data-filter="all" aria-pressed="true">ALL WORK</button>
+    <button class="cat" data-filter="thumbnails" aria-pressed="false">THUMBNAILS</button>
+    <button class="cat" data-filter="posters" aria-pressed="false">SOCIAL MEDIA POSTERS</button>
+    <button class="cat" data-filter="flyers" aria-pressed="false">FLYERS</button>
+    <button class="cat" data-filter="banners" aria-pressed="false">BANNERS</button>
+    <button class="cat" data-filter="events" aria-pressed="false">EVENT POSTERS</button>
+  </div>
+  <div class="gallery" id="gallery">
+    <p class="gallery-empty" role="status">Loading selected work…</p>
+  </div>
+</section>
 
-  <footer>
-    <p>Feeling Confused?<br>
-      I'd love to chat with you about how I can help. <a href="tel:+94784205326" class="btn">Call Now</a>
-    </p>
-    <div class="socials">
-      <p>Check out my socials at:</p>
-      <a href="https://www.facebook.com/profile.php?id=100095348353204" target=" blank">Facebook</a> |
-      <a href="https://wa.me/94784205326?text=Hello" target=" blank">WhatsApp</a>
-      <p>&copy;<i> 2025 All rights reserved.</i></p>
+<section class="about" id="about">
+  <div class="ghost">ABOUT<br>ME</div>
+  <div class="about-inner">
+    <small>03 / ABOUT</small>
+    <h2>Visuals with<br><em>purpose.</em></h2>
+    <div class="about-right">
+      <p class="lead">I’m a junior Graphic Designer, specializing in banners, thumbnails, flyers, and social media posters. With creativity and attention to detail, I create modern or minimalistic designs that connect with audiences and bring ideas to life.</p>
+      <div class="facts">
+        <div><span>TOOLS</span><strong>Photoshop<br>Illustrator</strong></div>
+        <div><span>FOCUS</span><strong>Social Media<br>Advertising<br>Digital Design</strong></div>
+        <div><span>BASED</span><strong>Sri Lanka</strong></div>
+      </div>
     </div>
-  </footer>
+  </div>
+</section>
 
+<section class="contact" id="contact">
+  <small>04 / CONTACT</small>
+  <h2>LET'S MAKE<br><em>SOMETHING.</em></h2>
+  <a class="contact-btn" id="contactLink" href="https://wa.me/94784205326?text=Hello">Start a conversation <span>↗</span></a>
+</section>
+</main>
+
+<footer><a class="footer-brand" href="#home" aria-label="ON Designs home"><img class="on-mark" src="assets/on-logo.png" alt="ON Designs"></a><span>© 2026 All rights reserved. All Artworks Designed by myself to add to the portfolio. "Not for clients".</span><div class="footer-links"><!--<a href="https://on-designs.freebow128.chatgpt.site/admin">Manage portfolio ↗</a>--><a href="#home">Back to top ↑</a></div></footer>
+
+<div class="follow" id="follow">VIEW<br>↗</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mtitle" tabindex="-1">
+  <div class="modal-bg"></div>
+  <div class="modal-box">
+    <button id="close">CLOSE ×</button>
+    <small id="mmeta"></small>
+    <h2 id="mtitle"></h2>
+    <img id="mimg" alt="">
+    <p id="mdesc"></p>
+  </div>
+</div>
+
+<script defer src="projects.js"></script>
+<script defer src="portfolio.js"></script>
 </body>
 </html>

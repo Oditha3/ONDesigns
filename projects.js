@@ -20,7 +20,7 @@ window.ON_DESIGNS_DATA = {
       "title": "Mountain Black — New Year",
       "category": "posters",
       "description": "A seasonal social campaign for Mountain Black Online Store.",
-      "image_url": "new-year.webp"
+      "image_url": "assets/new-year.webp"
     },
     {
       "id": "original-04",
@@ -119,7 +119,7 @@ window.ON_DESIGNS_DATA = {
       "category": "banners",
       "description": "A restaurant banner presenting its 24-hour service, food selection, and contact details.",
       "image_url": "eagle-restaurant-banner.webp"
-    }
+    },
     {
       "id": "import-fast-food-20261011",
       "title": "Eagle Family Restaurant",

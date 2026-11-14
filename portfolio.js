@@ -49,7 +49,7 @@ async function load(){
    const client=createClient(cfg.url,cfg.anonKey);
    const {data,error}=await client.from('projects').select('id,title,category,description,image_url').eq('is_published',true).order('sort_order',{ascending:true}).order('created_at',{ascending:false});
    if(error)throw error;
-   if(Array.isArray(data))projects=data;
+   if(Array.isArray(data)&&data.length)projects=data;
   }catch(error){console.warn('ON Designs CMS could not be loaded; showing the bundled portfolio snapshot.',error);}
  }
  render();

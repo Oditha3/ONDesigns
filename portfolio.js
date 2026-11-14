@@ -38,7 +38,22 @@ function render(){
  });
  gallery.classList.add('is-masonry');scheduleGalleryLayout();
 }
-function load(){projects=window.ON_DESIGNS_DATA.projects;render();}
+async function load(){
+ const localProjects=window.ON_DESIGNS_DATA?.projects||[];
+ projects=localProjects;
+ const cfg=window.ON_SUPABASE||{};
+ const configured=window.ON_SUPABASE_CONFIGURED===true;
+ if(configured){
+  try{
+   const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
+   const client=createClient(cfg.url,cfg.anonKey);
+   const {data,error}=await client.from('projects').select('id,title,category,description,image_url').eq('is_published',true).order('sort_order',{ascending:true}).order('created_at',{ascending:false});
+   if(error)throw error;
+   if(Array.isArray(data))projects=data;
+  }catch(error){console.warn('ON Designs CMS could not be loaded; showing the bundled portfolio snapshot.',error);}
+ }
+ render();
+}
 document.querySelectorAll('.cat[data-filter]').forEach(b=>b.addEventListener('click',()=>{activeCategory=b.dataset.filter;render();b.scrollIntoView?.({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'nearest',inline:'nearest'});}));
 document.addEventListener('pointermove',e=>{follow.style.left=e.clientX+'px';follow.style.top=e.clientY+'px';});document.getElementById('close').addEventListener('click',closeProject);document.querySelector('.modal-bg').addEventListener('click',closeProject);
 document.addEventListener('keydown',e=>{if(!modal.classList.contains('open'))return;if(e.key==='Escape')closeProject();if(e.key==='Tab'){e.preventDefault();document.getElementById('close').focus();}});

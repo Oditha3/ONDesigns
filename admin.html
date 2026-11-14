@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ON Designs — Admin</title>
+<link rel="icon" href="on-logo.png"><link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<main id="loginView" class="login-wrap">
+  <section class="login-card">
+    <img src="on-logo.png" alt="ON Designs" class="login-logo">
+    <p class="eyebrow">PRIVATE WORKSPACE</p><h1>Welcome back.</h1>
+    <p class="muted">Sign in to manage your ON Designs portfolio.</p>
+    <form id="loginForm">
+      <label>Email address<input id="email" type="email" autocomplete="username" required></label>
+      <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+      <button class="primary" type="submit">Sign in <span>↗</span></button>
+      <p id="loginMessage" class="message" role="status"></p>
+    </form>
+    <p class="footnote">Private administrator access only. Registration is disabled.</p>
+  </section>
+</main>
+<div id="appView" class="app hidden">
+  <aside class="sidebar">
+    <a class="side-brand" href="./"><img src="on-logo.png" alt="ON Designs"></a>
+    <p class="side-label">WORKSPACE</p>
+    <button class="side-link active" type="button">▦ <span>Projects</span></button>
+    <div class="side-bottom"><span class="admin-dot"></span><span id="adminEmail">Administrator</span><button id="logoutBtn" type="button">Sign out ↗</button></div>
+  </aside>
+  <section class="main-panel">
+    <header class="topbar"><div><p class="eyebrow">ON DESIGNS / CONTENT</p><h1>Projects</h1></div><a href="./" target="_blank" rel="noreferrer" class="view-site">View live site ↗</a></header>
+    <div class="content">
+      <div class="intro-row"><div><h2>Your portfolio</h2><p class="muted">Add new work, update details, and control what visitors see.</p></div><button id="newProjectBtn" class="primary" type="button">＋ Add project</button></div>
+      <div class="stats"><article><span>TOTAL PROJECTS</span><strong id="totalCount">—</strong></article><article><span>PUBLISHED</span><strong id="publishedCount">—</strong></article><article><span>DRAFTS</span><strong id="draftCount">—</strong></article></div>
+      <div class="toolbar"><h3>All projects</h3><select id="statusFilter" aria-label="Filter projects"><option value="all">All projects</option><option value="published">Published</option><option value="draft">Drafts</option></select></div>
+      <div id="projectList" class="project-list"><p class="muted">Loading projects…</p></div>
+      <p id="appMessage" class="message" role="status"></p>
+    </div>
+  </section>
+</div>
+<div id="editor" class="editor hidden" role="dialog" aria-modal="true" aria-labelledby="editorTitle">
+ <div class="editor-backdrop" data-close></div>
+ <form id="projectForm" class="editor-panel">
+  <header><div><p class="eyebrow">PROJECT DETAILS</p><h2 id="editorTitle">Add project</h2></div><button type="button" class="icon-btn" data-close aria-label="Close">×</button></header>
+  <input id="projectId" type="hidden">
+  <label>Project title<input id="projectTitle" maxlength="100" required placeholder="e.g. Restaurant Campaign"></label>
+  <label>Category<select id="projectCategory" required><option value="thumbnails">Thumbnails</option><option value="posters">Social media posters</option><option value="flyers">Flyers</option><option value="banners">Banners</option><option value="events">Event posters</option></select></label>
+  <label>Description<textarea id="projectDescription" rows="3" maxlength="500" placeholder="A short description of this project"></textarea></label>
+  <label>Artwork image<input id="projectImage" type="file" accept="image/jpeg,image/png,image/webp" ><small class="hint">JPG, PNG or WebP. Maximum 8 MB.</small></label>
+  <div id="imagePreview" class="image-preview">No image selected</div>
+  <label class="check-row"><input id="projectPublished" type="checkbox" checked><span>Publish this project on the portfolio</span></label>
+  <div class="editor-actions"><button type="button" class="secondary" data-close>Cancel</button><button type="submit" class="primary" id="saveBtn">Save project</button></div>
+  <p id="editorMessage" class="message" role="status"></p>
+ </form>
+</div>
+<script src="config.js"></script><script type="module" src="admin.js"></script>
+</body></html>

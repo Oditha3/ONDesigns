@@ -6,7 +6,7 @@ window.ON_DESIGNS_DATA = {
       "title": "Pizza Campaign",
       "category": "posters",
       "description": "Food advertising with a bold product presentation and a clear offer.",
-      "image_url": "pizza-poster.webp"
+      "image_url": "asset/pizza-poster.webp"
     },
     {
       "id": "original-02",

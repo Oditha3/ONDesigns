@@ -50,6 +50,8 @@ async function load(){
    const {data,error}=await client.from('projects').select('id,title,category,description,image_url').eq('is_published',true).order('sort_order',{ascending:true}).order('created_at',{ascending:false});
    if(error)throw error;
    if(Array.isArray(data)&&data.length)projects=data;
+   const {data:profile,error:profileError}=await client.from('site_settings').select('setting_value').eq('setting_key','profile_image_url').maybeSingle();
+   if(!profileError&&profile?.setting_value){const portrait=document.getElementById('profileImage');if(portrait)portrait.src=profile.setting_value;}
   }catch(error){console.warn('ON Designs CMS could not be loaded; showing the bundled portfolio snapshot.',error);}
  }
  render();

@@ -32,8 +32,12 @@
     <header class="topbar"><div><p class="eyebrow">ON DESIGNS / CONTENT</p><h1>Projects</h1></div><a href="./" target="_blank" rel="noreferrer" class="view-site">View live site ↗</a></header>
     <div class="content">
       <div class="intro-row"><div><h2>Your portfolio</h2><p class="muted">Add new work, update details, and control what visitors see.</p></div><button id="newProjectBtn" class="primary" type="button">＋ Add project</button></div>
-      <div class="stats"><article><span>TOTAL PROJECTS</span><strong id="totalCount">—</strong></article><article><span>PUBLISHED</span><strong id="publishedCount">—</strong></article><article><span>DRAFTS</span><strong id="draftCount">—</strong></article></div>
-      <div class="toolbar"><h3>All projects</h3><select id="statusFilter" aria-label="Filter projects"><option value="all">All projects</option><option value="published">Published</option><option value="draft">Drafts</option></select></div>
+      <section class="profile-settings">
+<div><p class="eyebrow">SITE APPEARANCE</p><h2>Profile picture</h2><p class="muted">Change the portrait shown on your homepage.</p></div>
+<div class="profile-controls"><img id="profileCurrent" src="oditha-profile.png" alt="Current profile picture"><label class="profile-upload">Choose new photo<input id="profileFile" type="file" accept="image/jpeg,image/png,image/webp"></label><button id="saveProfileBtn" class="primary" type="button" disabled>Save profile photo</button></div>
+<p id="profileMessage" class="message" role="status"></p></section>
+<div class="stats"><article><span>TOTAL PROJECTS</span><strong id="totalCount">—</strong></article><article><span>PUBLISHED</span><strong id="publishedCount">—</strong></article><article><span>DRAFTS</span><strong id="draftCount">—</strong></article></div>
+      <div class="toolbar"><div><h3>All projects</h3><p class="muted reorder-hint">Drag projects using the handle to change their order. Changes save automatically.</p></div><select id="statusFilter" aria-label="Filter projects"><option value="all">All projects</option><option value="published">Published</option><option value="draft">Drafts</option></select></div>
       <div id="projectList" class="project-list"><p class="muted">Loading projects…</p></div>
       <p id="appMessage" class="message" role="status"></p>
     </div>
